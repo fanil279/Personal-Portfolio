@@ -1,0 +1,485 @@
+@media (min-width: 1536px) {
+  nav {
+    max-width: 1536px;
+    font-size: 1.5rem;
+  }
+
+  .h1 {
+    font-size: 6rem;
+  }
+
+  h3 {
+    font-size: 3.5rem;
+  }
+
+  .subContainer2 p,
+  .subContainer p {
+    font-size: 1.5rem;
+  }
+
+  .subContainer p {
+    line-height: 3rem;
+  }
+}
+
+@media (max-width: 1536px) {
+  nav {
+    max-width: 1280px;
+    margin: auto;
+  }
+}
+
+@media (max-width: 1280px) {
+  nav {
+    max-width: 1024px;
+    font-size: 1rem;
+    margin: auto;
+  }
+}
+
+@media (max-width: 1024px) {
+  nav, .content > a {
+    max-width: 768px;
+    font-size: 0.9rem;
+    margin: auto;
+  }
+
+  .fa-fire {
+    position: absolute;
+    left: 5rem;
+    color: var(--linkCol);
+  }
+
+  h3 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 800px) {
+  nav, .content > a {
+    max-width: 670px;
+    font-size: 0.9rem;
+  }
+
+  .fa-fire {
+    position: absolute;
+    left: 4rem;
+    color: var(--linkCol);
+  }
+
+  h3 {
+    font-size: 1.7rem;
+  }
+}
+
+@media (max-width: 768px) {
+nav, .content > a {
+  max-width: 640px;
+  font-size: 0.8rem;
+}
+
+.fa-fire {
+  position: absolute;
+  left: 4rem;
+  color: var(--linkCol);
+}
+
+.h1 {
+  font-size: 4.3rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+form.container {
+  padding: 2rem;
+  width: 100%;
+}
+
+.form-control {
+    font-size: 0.9rem;
+}
+
+.btn-danger {
+    width: 100%;
+}
+
+.row {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 719px) {
+  nav, .content > a {
+    max-width: 540px;
+    font-size: 0.8rem;
+  }
+
+  .h1 {
+    font-size: 4.5rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 645px) {
+  nav, .content > a {
+    max-width: 475px;
+    font-size: 0.8rem;
+    margin: auto;
+  }
+
+  .fa-fire {
+    position: absolute;
+    left: 3rem;
+    color: var(--linkCol);
+  }
+
+  .h1 {
+    font-size: 3.7rem;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 540px) {
+  nav, .content > a {
+    max-width: 390px;
+    font-size: 0.66rem;
+    margin: auto;
+  }
+
+  .fa-fire {
+    position: absolute;
+    left: 2rem;
+    color: var(--linkCol);
+    font-size: 1rem;
+  }
+
+  .h1 {
+    font-size: 3.4rem;
+  }
+
+  h3 {
+    font-size: 1.1rem;
+  }
+
+  .text .h1 {
+    line-height: 7rem;
+  }
+}
+
+@media (max-width: 475px) {
+  nav, .content > a {
+    max-width: 100%;
+    border-radius: 0%;
+    height: 3.3rem;
+    border-bottom: none;
+  }
+
+  nav * {
+    display: none;
+  }
+
+  .fa-fire {
+    position: absolute;
+    left: 2rem;
+    color: var(--linkCol);
+  }
+
+  .dropdown .fa-arrow-down {
+    display: none;
+  }
+
+  .h1 {
+    font-size: 3rem;
+  }
+
+  h3 {
+    font-size: 1rem;
+  }
+
+  #h3 {
+    font-size: 1.8rem;
+  }
+
+  .text .h1 {
+    line-height: 6rem;
+  }
+}
+
+@media (max-width: 430px) {
+  nav, .content > a {
+    height: 3.3rem;
+    width: 100%;
+    margin: auto;
+    border-radius: 0%;
+  }
+
+  nav * {
+    display: none;
+  }
+
+  .dropdown .fa-arrow-down {
+    display: none;
+  }
+
+  .h1 {
+    font-size: 2.8rem;
+  }
+
+  h3 {
+    font-size: 0.95rem;
+  }
+
+  #h3 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 395px) {
+  nav, .content > a {
+    width: 100%;
+    height: 2.7rem;
+    border-radius: 0%;
+  }
+
+  nav * {
+    display: none;
+  }
+
+  .dropdown .fa-arrow-down {
+    display: none;
+  }
+
+  .text .h1 {
+    line-height: 4.5rem;
+  }
+
+  .h1 {
+    font-size: 2.5rem;
+  }
+
+  h3 {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 385px) {
+  nav, .content > a {
+    width: 100%;
+    height: 2.7rem;
+    border-radius: 0%;
+  }
+
+  nav * {
+    display: none;
+  }
+
+  .dropdown .fa-arrow-down {
+    display: none;
+  }
+
+  .h1 {
+    font-size: 2.5rem;
+  }
+
+  h3 {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 376px) {
+  nav, .content > a {
+    width: 100%;
+    height: 2.7rem;
+    border-radius: 0%;
+  }
+
+  nav * {
+    display: none;
+  }
+
+  .dropdown .fa-arrow-down {
+    display: none;
+  }
+
+  .h1 {
+    font-size: 2.9rem;
+  }
+
+  h3 {
+    font-size: 1.1rem;
+  }
+
+  #h3 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 360px) {
+  nav, .content > a {
+    width: 100%;
+    height: 2.7rem;
+    border-radius: 0%;
+  }
+
+  nav * {
+    display: none;
+  }
+
+  .dropdown .fa-arrow-down {
+    display: none;
+  }
+}
+
+@media (max-width: 355px) {
+  nav, .content > a {
+    width: 100%;
+    height: 2.7rem;
+    border-radius: 0%;
+  }
+
+  nav * {
+    display: none;
+  }
+
+  .dropdown .fa-arrow-down {
+    display: none;
+  }
+
+  .h1 {
+    font-size: 2.3rem;
+  }
+
+  h2 {
+    font-size: 0.9rem;
+  }
+
+  h3 {
+    font-size: 0.8rem;
+  }
+
+  h4 {
+    font-size: 1rem;
+  }
+
+  h2,
+  h4 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .subContainer2 {
+    padding: 10px;
+    max-width: 90%;
+    margin-left: 1.3rem;
+  }
+}
+
+@media (max-width: 345px) {
+  nav, .content > a {
+    width: 100%;
+    height: 2.7rem;
+    border-radius: 0%;
+  }
+
+  nav * {
+    display: none;
+  }
+
+  .dropdown .fa-arrow-down {
+    display: none;
+  }
+
+  h2, h4 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .h1 {
+    font-size: 2.4rem;
+  }
+
+  .subContainer > p {
+    font-size: 0.7rem;
+    margin-left: 15px;
+    text-align: center;
+  }
+
+  .subContainer2 {
+    padding: 10px;
+    max-width: 90%;
+    margin-left: 1.3rem;
+  }
+
+  #boxWrapper {
+    max-width: 85%;
+    margin-left: 1.2rem;
+  }
+}
+
+@media (max-width: 320px) {
+  nav, .content > a {
+    width: 100%;
+    height: 2.7rem;
+    border-radius: 0%;
+  }
+
+  nav * {
+    display: none;
+  }
+
+  .dropdown .fa-arrow-down {
+    display: none;
+  }
+
+  .subContainer > p {
+    font-size: 0.7rem;
+    margin-left: 15px;
+    text-align: center;
+  }
+
+  .subContainer2 {
+    padding: 10px;
+    max-width: 90%;
+    margin-left: 1.6rem;
+  }
+
+  .subContainer2 > p {
+    font-size: 0.7rem;
+    text-align: center;
+  }
+
+  h2, h4 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .h1 {
+    font-size: 2.2rem;
+  }
+
+  #boxWrapper {
+    max-width: 85%;
+    margin-left: 0.7rem;
+  }
+
+  .box > p {
+    font-size: 1.2rem;
+  }
+}
+
+@media(prefers-reduced-motion) {
+  .anim {
+    animation: none;
+  }
+}

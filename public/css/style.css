@@ -1,0 +1,415 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+:root {
+    --mainCol: black;
+    --mainCol2: rgb(50, 50, 50);
+    --fontCol: white;
+    --linkCol: darkred;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--mainCol2);
+    overflow-x: hidden;
+    font-family: "Lato", serif;
+    font-weight: 400;
+    font-style: normal;
+    margin-inline: auto;
+}
+
+nav {
+    height: 4rem;
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 3rem;
+    background-color: var( --mainCol);
+    border-radius: 0px 0px 25px 25px;
+    border-bottom: 2px solid var(--linkCol);
+    box-shadow: 0px 1px 0px 1px var(--linkCol);
+    max-width: 1536px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+nav * {
+    text-decoration: none;
+    color: var(--fontCol);
+}
+
+nav a:hover {
+    color: var(--linkCol);
+}
+
+.dropdown  {
+    display: inline-block;
+    position: relative;
+}
+
+.dropdown:hover {
+  background-color: var(--mainCol);
+}
+
+.dropdown:hover .content {
+  display: block;
+  background-color: var(--mainCol);
+}
+
+.dropdown:hover .fa-arrow-down {
+  color: var(--linkCol);
+}
+
+.fa-fire {
+    position: absolute;
+    left: 6rem;
+    color: var(--linkCol);
+    font-size: 3rem;
+}
+
+.content {
+    display: none;
+    position: absolute;
+    background-color: var(--mainCol);
+    min-width: max-content;
+    padding: 15px 2px;
+    border-radius: 0% 0% 10% 30%;
+    box-shadow: 0px 2px 0px 0px var(--fontCol);
+    z-index: 1;
+}
+
+.content > a {
+    font-size: 1rem;
+    padding: 10px 6px 10px 7px;
+    border-top: 2px solid var(--fontCol);
+}
+
+#home {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.text .h1 {
+  line-height: 10rem;
+}
+
+.h1 {
+  color: var(--fontCol);
+  font-size: 5rem;
+  text-align: center;
+}
+
+#h1, #h3 {
+  color: var(--linkCol);
+}
+
+#h3 {
+  font-size: 2.5rem;
+}
+
+h3 {
+  color: var(--fontCol);
+  font-size: 2rem;
+  text-align: center;
+}
+
+#aboutMe {
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 1em;
+  justify-content: center;
+  align-items: center;
+  padding: 5rem;
+}
+
+figure {
+  display: grid;
+  grid-template-columns: subgrid;
+  grid-template-rows: subgrid;
+  grid-column: span 1;
+  grid-row: span 1;
+}
+
+figure img {
+  border-radius: 10px;
+  max-width: 100%;
+}
+
+.subContainer2 {
+  display: grid;
+  grid-template-columns: subgrid;
+  grid-template-rows: subgrid;
+  grid-column: span 1;
+  grid-row: span 1;
+  border: 2px solid var(--linkCol);
+  border-radius: 10px;
+  background-color: var(--mainCol);
+  max-width: 100%;
+}
+
+.subContainer > p {
+  color: var(--fontCol);
+  background-color: var(--mainCol2);
+  padding-left: 15px;
+  line-height: 2.1rem;
+  font-size: 1.2rem;
+}
+
+.subContainer2 p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--fontCol);
+  background-color: var(--mainCol2);
+  padding: 10px;
+  margin: 10px;
+
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.subContainer2 p:hover {
+  transform: translateY(-5px);
+  color: var(--linkCol)
+}
+
+h2 {
+  color: var(--fontCol);
+}
+
+.h4 {
+  color: var(--linkCol);
+  margin-bottom: 5px;
+}
+
+#mySkills {
+  background-color: var(--mainCol);
+  height: auto;
+}
+
+#h2, .h4, #boxWrapper{
+  margin-left: 1rem;
+}
+
+#h4 {
+  padding-top: 2rem;
+}
+
+#boxWrapper {
+  height: auto;
+  margin: 2rem 2rem 0 2rem;
+  padding-bottom: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 5em;
+}
+
+.box {
+  height: 15em;
+  width: 25em;
+  display: grid;
+  grid-template-columns: subgrid;
+  grid-row: span 2;
+  padding: 2rem;
+  text-align: center;
+  background-color: var(--mainCol2);
+  border-radius: 10px;
+  color: var(--fontCol);
+
+  transition: color 0.1s ease-in;
+}
+
+.box:hover {
+  background-color: var(--fontCol);
+  color: var(--mainCol);
+}
+
+.box p {
+  font-size: 1.3rem;
+}
+
+.box .subText {
+  font-size: 0.85rem;
+}
+
+.fa-flag, .fa-paintbrush, .fa-code, .fa-laptop, .fa-briefcase, .fa-headset {
+  color: var(--linkCol);
+  font-size: 2rem;
+}
+
+.anim {
+  animation: autoShow both;
+  animation-timeline: view(80% 20%);
+}
+@keyframes autoShow {
+  from{
+    opacity: 0;
+    transform: translateY(200px) scale(0.3);
+  } to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+#projects {
+  height: auto;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
+
+#projects h1 {
+  color: var(--linkCol);
+}
+
+option {
+  padding: 10px;
+}
+
+#default {
+  margin-bottom: 5px;
+  color: var(--linkCol);
+  font-size: 1.5rem;
+}
+
+.form-select:focus {
+  border-color: var(--linkCol); /* Highlight on focus */
+  box-shadow: 0 0 4px var(--linkCol);
+}
+
+.btn-danger {
+  background-color: var(--linkCol);
+  border: var(--linkCol);
+}
+
+#contact {
+  height: auto;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: url(../files/pexels-nguyen-khac-tien-252426281-12542838.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+form.container {
+  background: rgba(255, 255, 255, 0.5); /* Semi-transparent white background */
+  border-radius: 10px;
+  padding: 5rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Soft shadow for elegance */
+  width: 80%;
+  max-width: 600px; /* Limit the max width of the form */
+}
+
+form h1{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3rem;
+  color: var(--linkCol);
+}
+
+form div {
+  margin-top: 5rem;
+}
+
+.col input, .mb-3 input {
+  background: rgba(169, 169, 169, 0.3); /* Semi-transparent gray */
+}
+
+.mb-3 textarea {
+  background: rgba(169, 169, 169, 0.3); /* Semi-transparent gray */
+}
+
+.form-control {
+  border-radius: 5px; /* Round the form inputs */
+  padding: 10px;
+  font-size: 16px;
+  transition: all 0.3s ease; /* Smooth transition for inputs */
+}
+
+.form-control:focus {
+  border-color: var(--linkCol); /* Change border color on focus */
+  box-shadow: 0 0 5px var(--linkCol) /* Add subtle glow effect */
+}
+
+label.form-label {
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+textarea.form-control {
+  resize: vertical; /* Allow resizing vertically */
+}
+
+footer {
+  background-color: var(--mainCol);
+  color: var(--fontCol);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px -1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+
+.footer-links, .social-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.footer-links a, .social-links a {
+  text-decoration: none;
+  color: var(--fontCol);
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover, .social-links a:hover {
+  color: var(--linkCol);
+}
+
+.social-links a {
+  font-size: 1.5rem;
+}
