@@ -23,8 +23,8 @@ app.post("/message", (req, res) => {
     fs.appendFileSync("messages.txt", message)
     res.redirect("/")
    } catch (error) {
-    console.error("Error handling /message request:", error);
-    res.status(500).send("Internal Server Error");
+    console.error("Error handling /message request:", error)
+    res.status(500).send("Internal Server Error")
    }
 })
 

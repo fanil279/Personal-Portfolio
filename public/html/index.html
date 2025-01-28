@@ -64,7 +64,7 @@
         </section>
         <section id="mySkills">
             <h4 id="h4" class="h4 anim"><i class="fa-sharp-duotone fa-solid fa-angles-right"></i>My services</h4>
-            <h2 class="anim">What can I do</h2>
+            <h2 class="anim" id="h2">What can I do</h2>
 
             <div id="boxWrapper">
             <div class="box anim">
@@ -107,7 +107,8 @@
                 <option value="2">New project is comming soon...</option>
                 <option value="3">New project is comming soon...</option>
               </select>
-              <button type="button" class="btn btn-danger">Download my CV</button>
+              <button type="button" id="download-cv-btn" class="btn btn-danger">Download my CV</button>
+              <a id="cv-link" href="../files/CV.pdf" download="CV.pdf" style="display: none"></a>
         </section>
         <section id="contact">
             <form action="/message" method="post" class="container">
@@ -115,14 +116,17 @@
                 <div class="row">
                     <div class="col">
                         <input type="text" name="firstname" class="form-control" placeholder="First name" aria-label="First name">
+                        <span id="fn"></span>
                     </div>
                     <div class="col">
                         <input type="text" name="lastname" class="form-control" placeholder="Last name" aria-label="Last name">
+                        <span id="ln"></span>
                     </div>
                 </div>
                 <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Email address</label>
                     <input type="email" name="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                    <span id="e-mail"></span>
                 </div>
                 <div class="mb-3">
                     <label for="exampleFormControlTextarea1" class="form-label">Message</label>
@@ -145,7 +149,8 @@
                 <a href="https://t.me/fanil_279r" target="_blank"><i class="fa-brands fa-telegram"></i> Telegram</a>
                 <a href="https://www.instagram.com/r.fanil_279" target="_blank"><i class="fa-brands fa-instagram"></i> Instagram</a>
                 <a href="https://www.linkedin.com/in/fanil-ramakayev-6885922a6" target="_blank"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
-                <a href="mailto:framakayev@students.wiut.uz"><i class="fa-solid fa-envelope"></i> Email</a>
+                <a href="https://github.com/fanil279" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
+                <a href="mailto:framakayev@students.wiut.uz" target="_blank"><i class="fa-solid fa-envelope"></i> Email</a>
             </div>
         </div>
     </footer>       

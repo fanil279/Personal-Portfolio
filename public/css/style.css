@@ -121,6 +121,7 @@ nav a:hover {
 
 .h1 {
   color: var(--fontCol);
+  font-weight: 700;
   font-size: 5rem;
   text-align: center;
 }
@@ -342,6 +343,10 @@ form h1{
 
 form div {
   margin-top: 5rem;
+}
+
+span {
+  color: var(--linkCol);
 }
 
 .col input, .mb-3 input {
