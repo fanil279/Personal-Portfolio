@@ -40,8 +40,7 @@ nav {
     border-bottom: 2px solid var(--linkCol);
     box-shadow: 0px 1px 0px 1px var(--linkCol);
     max-width: 1536px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: auto;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
 }
@@ -259,6 +258,13 @@ h2 {
   font-size: 0.85rem;
 }
 
+.circle {
+  z-index: -100;
+  position: absolute;
+  box-shadow: 0 0 1000px 50px var(--linkCol);
+  top: 25rem;
+}
+
 .fa-flag, .fa-paintbrush, .fa-code, .fa-laptop, .fa-briefcase, .fa-headset {
   color: var(--linkCol);
   font-size: 2rem;
@@ -268,6 +274,7 @@ h2 {
   animation: autoShow both;
   animation-timeline: view(80% 20%);
 }
+
 @keyframes autoShow {
   from{
     opacity: 0;
@@ -397,24 +404,49 @@ footer {
   align-items: center;
 }
 
-.footer-links, .social-links {
+.footer-links, .social-links, .lang {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
   justify-content: center;
 }
 
-.footer-links a, .social-links a {
+.footer-links a, .social-links a, .lang a {
   text-decoration: none;
   color: var(--fontCol);
   font-size: 1.2rem;
   transition: color 0.3s ease;
 }
 
-.footer-links a:hover, .social-links a:hover {
+.footer-links a:hover, .social-links a:hover, .lang a:hover {
   color: var(--linkCol);
 }
 
 .social-links a {
   font-size: 1.5rem;
+}
+
+hr {
+  border: 1px solid #EE82EE;
+  height: 2px;
+  width: 105%;
+}
+
+.lang {
+  display: flex;
+  gap: 1rem;
+}
+
+.activeText {
+  border-bottom: 2px solid var(--linkCol);
+}
+
+#preloader {
+  background: #000 url(../files/1_i1yv42RrOYhvw7U2MM4qCg.gif) no-repeat center center;
+  background-size: 25%;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+  transition: opacity 0.5s ease-out;
 }

@@ -1,3 +1,32 @@
+@media (min-width: 2560px) {
+  nav {
+    max-width: 2560px;
+    font-size: 2.5rem;
+    height: 6rem;
+  }
+
+  .h1 {
+    font-size: clamp(2.5rem, 5vw, 7rem);
+  }
+
+  h3 {
+    font-size: 4rem;
+  }
+
+  .subContainer2 p,
+  .subContainer p {
+    font-size: 2.2rem;
+  }
+
+  .subContainer p {
+    line-height: 4rem;
+  }
+
+  .footer-links a, .social-links a, .lang a {
+    font-size: 1.8rem;
+  }
+}
+
 @media (min-width: 1536px) {
   nav {
     max-width: 1536px;
@@ -5,7 +34,7 @@
   }
 
   .h1 {
-    font-size: 5rem;
+    font-size: clamp(3rem, 4vw, 5rem);
   }
 
   h3 {
@@ -19,6 +48,10 @@
 
   .subContainer p {
     line-height: 2.5rem;
+  }
+
+  .footer-links a, .social-links a, .lang a {
+    font-size: 2rem;
   }
 }
 
@@ -73,40 +106,44 @@
 }
 
 @media (max-width: 768px) {
-nav, .content > a {
-  max-width: 640px;
-  font-size: 0.8rem;
-}
+  nav, .content > a {
+    max-width: 640px;
+    font-size: 0.8rem;
+  }
 
-.fa-fire {
-  position: absolute;
-  left: 4rem;
-  color: var(--linkCol);
-}
+  .fa-fire {
+    position: absolute;
+    left: 4rem;
+    color: var(--linkCol);
+  }
 
-.h1 {
-  font-size: 4.3rem;
-}
+  .h1 {
+    font-size: clamp(3rem, 6vw, 4.3rem);
+  }
 
-h3 {
-  font-size: 1.5rem;
-}
+  h3 {
+    font-size: 1.5rem;
+  }
 
-form.container {
-  padding: 2rem;
-  width: 100%;
-}
-
-.form-control {
-    font-size: 0.9rem;
-}
-
-.btn-danger {
+  form.container {
+    padding: 2rem;
     width: 100%;
-}
+  }
 
-.row {
+  .form-control {
+    font-size: 0.9rem;
+  }
+
+  .btn-danger {
+    width: 100%;
+  }
+
+  .row {
     flex-direction: column;
+  }
+
+  .footer-links a, .social-links a, .lang a {
+    font-size: 1.1rem;
   }
 }
 
@@ -172,6 +209,10 @@ form.container {
 
   .text .h1 {
     line-height: 7rem;
+  }
+
+  .footer-links a, .social-links a, .lang a {
+    font-size: 1rem;
   }
 }
 
@@ -370,8 +411,7 @@ form.container {
     font-size: 1rem;
   }
 
-  h2,
-  h4 {
+  h2, h4 {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -442,31 +482,12 @@ form.container {
     display: none;
   }
 
-  .subContainer > p {
-    font-size: 0.7rem;
-    margin-left: 15px;
-    text-align: center;
-  }
-
-  .subContainer2 {
-    padding: 10px;
-    max-width: 90%;
-    margin-left: 1.6rem;
-  }
-
-  .subContainer2 > p {
-    font-size: 0.7rem;
-    text-align: center;
-  }
-
-  h2, h4 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
   .h1 {
-    font-size: 2.2rem;
+    font-size: 2rem;
+  }
+
+  .subContainer p {
+    font-size: 0.7rem;
   }
 
   #boxWrapper {
@@ -474,13 +495,27 @@ form.container {
     margin-left: 0.7rem;
   }
 
-  .box > p {
-    font-size: 1.2rem;
+  .footer-links a, .social-links a {
+    font-size: 1rem;
   }
 }
 
-@media(prefers-reduced-motion) {
-  .anim {
-    animation: none;
+@media (max-width: 280px) {
+  .h1 {
+    font-size: 1.9rem;
+  }
+
+  .subContainer p {
+    font-size: 0.6rem;
+  }
+
+  #boxWrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+}
+
+  .footer-links a, .social-links a {
+    font-size: 1rem;
   }
 }

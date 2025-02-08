@@ -2,6 +2,7 @@ const express = require("express")
 const path = require("path")
 const fs = require("fs")
 const body_parser = require("body-parser")
+const port = process.env.PORT || 8000
 
 const app = express()
 
@@ -28,6 +29,6 @@ app.post("/message", (req, res) => {
    }
 })
 
-app.listen(3000, () => {
+app.listen(port, () => {
     console.log("Server is running on host 3000: http://localhost:3000")
 })

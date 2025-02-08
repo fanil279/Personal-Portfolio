@@ -4,7 +4,7 @@
   "main": "express.js",
   "scripts": {
     "start": "node express",
-     "dev": "node --watch express"
+     "dev": "node --watch --env-file=.env express"
   },
   "keywords": [
     "portfolio",

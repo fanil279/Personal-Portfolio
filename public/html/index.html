@@ -9,22 +9,25 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="icon" type="image/x-icon" href="../files/">
     <script src="../js/script.js"></script>
 </head>
 <body>
+    <div id="preloader"></div>
+
     <header>
         <nav>
             <i class="fa-duotone fa-solid fa-fire"></i>
-            <a href="#home">HOME</a>
+            <a data-i18n="home" href="#home">HOME</a>
             <div class="dropdown">
-                <a href="#aboutMe">ABOUT ME</a>
+                <a data-i18n="aboutMe" href="#aboutMe">ABOUT ME</a>
                 <i class="fa-solid fa-arrow-down"></i>
                 <div class="content">
-                    <a href="#mySkills">MY SKILLS</a>
+                    <a data-i18n="mySkills" href="#mySkills">MY SKILLS</a>
                 </div>
             </div>
-            <a href="#projects">PROJECTS</a>
-            <a href="#contact">CONTACT</a>
+            <a data-i18n="projects" href="#projects">PROJECTS</a>
+            <a data-i18n="contact" href="#contact">CONTACT</a>
         </nav>
     </header>
     <main>
@@ -33,22 +36,21 @@
                 <source src="../files/33821-398473428.mp4" type="video/mp4">
             </video>
             <div class="text">
-                <h1 class="h1" id="h1">Personal Portfolio</h1>
-                <h3 id="h3">of</h3>
-                <h1 class="h1">Fanil Ramakaev</h1>
-                <h3>- A passionate and dedicated junior full-stack web developer,<br>
+                <h1 class="h1" data-i18n="personalPortfolio" id="h1">Personal Portfolio</h1>
+                <h1 class="h1" data-i18n="fanilRamakaev">Fanil Ramakaev</h1>
+                <h3 data-i18n="description">- A passionate and dedicated junior full-stack web developer,<br>
                   driven by the ever-evolving world of technology and its<br>
                   limitless possibilities.</h3>
             </div>
         </section>
         <section id="aboutMe">
             <figure class="anim">
-                <img src="../files/IMG_1656.JPG" alt="photo" style="width: 750px;">
+                <img src="../files/IMG_1656.JPG" alt="photo" loading="lazy" style="width: 750px;">
             </figure>
             <div class="subContainer anim">
-                <h4 class="h4"><i class="fa-sharp-duotone fa-solid fa-angles-right"></i>About me</h4>
-                <h2 id="h2">Who Am I</h2>
-                <p>Hi, I’m Fanil Ramakaev, a sophomore at the University of Westminster and a junior frontend developer passionate about
+                <h4 class="h4"><i class="fa-sharp-duotone fa-solid fa-angles-right"></i> <span data-i18n="aboutMeHeader">About me</span></h4>
+                <h2 id="h2" data-i18n="whoAmI">Who Am I</h2>
+                <p data-i18n="aboutDescription">Hi, I’m Fanil Ramakaev, a sophomore at the University of Westminster and a junior frontend developer passionate about
                    creating clean, responsive, and user-friendly websites. I have a solid foundation in HTML, CSS, and JavaScript and am
                    currently delving deeper into React to expand my frontend expertise. Additionally, I possess foundational UI/UX design
                    skills. With a goal of becoming a full-stack developer, I am actively exploring backend technologies, including Node.js,
@@ -63,87 +65,89 @@
             </div>
         </section>
         <section id="mySkills">
-            <h4 id="h4" class="h4 anim"><i class="fa-sharp-duotone fa-solid fa-angles-right"></i>My services</h4>
-            <h2 class="anim" id="h2">What can I do</h2>
+            <h4 id="h4" class="h4 anim"><i class="fa-sharp-duotone fa-solid fa-angles-right"></i> <span data-i18n="mySkillsHeader">My services</span></h4>
+            <h2 class="anim" id="h2" data-i18n="whatCanIDo">What can I do</h2>
 
             <div id="boxWrapper">
-            <div class="box anim">
-                <i class="fa-solid fa-flag"></i>
-                <p>Branding</p>
-                <p class="subText">Creating consistent and cohesive brand experiences through the use of logos, color schemes, typography, and other branding assets.</p>
-            </div>
-            <div class="box anim">
-                <i class="fa-solid fa-paintbrush"></i>
-                <p>Creative Design</p>
-                <p class="subText">Leveraging artistic elements and aesthetic principles to craft visually appealing and engaging experiences.</p>
-            </div>
-            <div class="box anim">
-                <i class="fa-solid fa-code"></i>
-                <p>Clean Code</p>
-                <p class="subText">Writing code that is well-structured, reliable, and maintainable. It involves following coding best practices.</p>
-            </div>
-            <div class="box anim">
-                <i class="fa-solid fa-laptop"></i>
-                <p>User Interface</p>
-                <p class="subText">Creating intuitive and user-friendly designs that prioritize usability, accessibility, and seamless user experience.</p>
-            </div>
-            <div class="box anim">
-                <i class="fa-solid fa-briefcase"></i>
-                <p>User experience</p>
-                <p class="subText">Understanding user behaviours, needs, and preferences to create interfaces that are intuitive, efficient, and enjoyable to use.</p>
-            </div>
-            <div class="box anim">
-                <i class="fa-solid fa-headset"></i>
-                <p>Fast Support</p>
-                <p class="subText">Addressing and resolving user-reported issues or inquires related to the website or application.</p>
-            </div>
+                <div class="box anim">
+                    <i class="fa-solid fa-flag"></i>
+                    <p data-i18n="branding">Branding</p>
+                    <p class="subText" data-i18n="brandingDescription">Creating consistent and cohesive brand experiences through the use of logos, color schemes, typography, and other branding assets.</p>
+                </div>
+                <div class="box anim">
+                    <i class="fa-solid fa-paintbrush"></i>
+                    <p data-i18n="graphicDesign">Graphic Design</p>
+                    <p class="subText" data-i18n="creativeDesignDescription">Leveraging artistic elements and aesthetic principles to craft visually appealing and engaging experiences.</p>
+                </div>
+                <div class="box anim">
+                    <i class="fa-solid fa-code"></i>
+                    <p data-i18n="cleanCode">Clean Code</p>
+                    <p class="subText" data-i18n="cleanCodeDescription">Writing code that is well-structured, reliable, and maintainable. It involves following coding best practices.</p>
+                </div>
+                <div class="box anim">
+                    <i class="fa-solid fa-laptop"></i>
+                    <p data-i18n="userInterface">User Interface</p>
+                    <p class="subText" data-i18n="userInterfaceDescription">Creating intuitive and user-friendly designs that prioritize usability, accessibility, and seamless user experience.</p>
+                    <span class="circle"></span>
+                    <span class="circle"></span>
+                </div>
+                <div class="box anim">
+                    <i class="fa-solid fa-briefcase"></i>
+                    <p data-i18n="userExperience">User experience</p>
+                    <p class="subText" data-i18n="userExperienceDescription">Understanding user behaviours, needs, and preferences to create interfaces that are intuitive, efficient, and enjoyable to use.</p>
+                </div>
+                <div class="box anim">
+                    <i class="fa-solid fa-headset"></i>
+                    <p data-i18n="fastSupport">Fast Support</p>
+                    <p class="subText" data-i18n="fastSupportDescription">Addressing and resolving user-reported issues or inquires related to the website or application.</p>
+                </div>
             </div>
         </section>
         <section id="projects">
-            <h1>My projects</h1>
+            <h1 data-i18n="myProjects">My projects</h1>
             <select class="form-select form-select-sm" aria-label="Small select example">
-                <option id="default" selected>Select a project to view!</option>
-                <option value="1">New project is comming soon...</option>
-                <option value="2">New project is comming soon...</option>
-                <option value="3">New project is comming soon...</option>
+                <option id="default" selected data-i18n="selectProject">Select a project to view!</option>
+                <option value="1" data-i18n="comingSoon">New project is coming soon...</option>
+                <option value="2" data-i18n="comingSoon">New project is coming soon...</option>
+                <option value="3" data-i18n="comingSoon">New project is coming soon...</option>
               </select>
-              <button type="button" id="download-cv-btn" class="btn btn-danger">Download my CV</button>
+              <button type="button" id="download-cv-btn" class="btn btn-danger" data-i18n="downloadCV">Download my CV</button>
               <a id="cv-link" href="../files/CV.pdf" download="CV.pdf" style="display: none"></a>
         </section>
         <section id="contact">
             <form action="/message" method="post" class="container">
-                <h1>Contact me</h1>
+                <h1 data-i18n="contactMe">Contact me</h1>
                 <div class="row">
                     <div class="col">
-                        <input type="text" name="firstname" class="form-control" placeholder="First name" aria-label="First name">
+                        <input type="text" name="firstname" class="form-control" data-i18n="firstName" placeholder="First name" aria-label="First name">
                         <span id="fn"></span>
                     </div>
                     <div class="col">
-                        <input type="text" name="lastname" class="form-control" placeholder="Last name" aria-label="Last name">
+                        <input type="text" name="lastname" class="form-control" data-i18n="lastName" placeholder="Last name" aria-label="Last name">
                         <span id="ln"></span>
                     </div>
                 </div>
                 <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">Email address</label>
-                    <input type="email" name="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                    <label for="exampleFormControlInput1" class="form-label" data-i18n="emailLabel">Email address</label>
+                    <input type="email" name="email" class="form-control" data-i18n="email" id="exampleFormControlInput1" placeholder="name@example.com">
                     <span id="e-mail"></span>
                 </div>
                 <div class="mb-3">
-                    <label for="exampleFormControlTextarea1" class="form-label">Message</label>
-                    <textarea name="textarea" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    <label for="exampleFormControlTextarea1" class="form-label" data-i18n="messageLabel">Message</label>
+                    <textarea name="textarea" class="form-control" data-i18n="message" id="exampleFormControlTextarea1" rows="3" placeholder="Message"></textarea>
                 </div>
-                <button type="submit" value="Submit" class="btn btn-danger btn2">Submit</button>
+                <button type="submit" value="Submit" class="btn btn-danger btn2" data-i18n="submit">Submit</button>
             </form>
         </section>
     </main>
     <footer>
         <div class="footer-content">
             <div class="footer-links">
-                <a href="#home">Home</a>
-                <a href="#aboutMe">About Me</a>
-                <a href="#mySkills">My Skills</a>
-                <a href="#projects">Projects</a>
-                <a href="#contact">Contact</a>
+                <a href="#home" data-i18n="home">Home</a>
+                <a href="#aboutMe" data-i18n="aboutMe">About Me</a>
+                <a href="#mySkills" data-i18n="mySkills">My Skills</a>
+                <a href="#projects" data-i18n="projects">Projects</a>
+                <a href="#contact" data-i18n="contact">Contact</a>
             </div>
             <div class="social-links">
                 <a href="https://t.me/fanil_279r" target="_blank"><i class="fa-brands fa-telegram"></i> Telegram</a>
@@ -152,7 +156,12 @@
                 <a href="https://github.com/fanil279" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
                 <a href="mailto:framakayev@students.wiut.uz" target="_blank"><i class="fa-solid fa-envelope"></i> Email</a>
             </div>
+            <hr>
         </div>
-    </footer>       
+        <div class="lang">
+            <a href="#" lang="en" id="en" class="activeText">EN</a>
+            <a href="#" lang="ru" id="rus">RU</a>
+        </div>
+    </footer>
 </body>
 </html>
