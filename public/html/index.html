@@ -18,23 +18,24 @@
     <header>
         <nav>
             <i class="fa-duotone fa-solid fa-fire"></i>
-            <a data-i18n="home" href="#home">HOME</a>
-            <div class="dropdown">
-                <a data-i18n="aboutMe" href="#aboutMe">ABOUT ME</a>
-                <i class="fa-solid fa-arrow-down"></i>
-                <div class="content">
-                    <a data-i18n="mySkills" href="#mySkills">MY SKILLS</a>
+            <a data-i18n="home" class="txt" href="#home">HOME</a>
+            <div class="dropdown" id="ddLink">
+                <a data-i18n="aboutMe" class="txt" href="#aboutMe">ABOUT ME</a>
+                <i class="fa-solid txt fa-arrow-down"></i>
+                <div id="content" class="content">
+                    <a data-i18n="mySkills" class="txt" href="#mySkills">MY SKILLS</a>
                 </div>
             </div>
-            <a data-i18n="projects" href="#projects">PROJECTS</a>
-            <a data-i18n="contact" href="#contact">CONTACT</a>
+            <a data-i18n="projects" class="txt" href="#projects">PROJECTS</a>
+            <a data-i18n="contact" class="txt" href="#contact">CONTACT</a>
         </nav>
+
+        <video id="myVideo" class="video" preload="auto" autoplay muted loop style="width: 100%; height: 100%;">
+            <source src="../files/33821-398473428.mp4" type="video/mp4">
+        </video>
     </header>
     <main>
         <section id="home">
-            <video id="myVideo" class="video" preload="auto" autoplay muted loop style="width: 100%; height: 100%;">
-                <source src="../files/33821-398473428.mp4" type="video/mp4">
-            </video>
             <div class="text">
                 <h1 class="h1" data-i18n="personalPortfolio" id="h1">Personal Portfolio</h1>
                 <h1 class="h1" data-i18n="fanilRamakaev">Fanil Ramakaev</h1>
@@ -45,61 +46,61 @@
         </section>
         <section id="aboutMe">
             <figure class="anim">
-                <img src="../files/IMG_1656.JPG" alt="photo" loading="lazy" style="width: 750px;">
+                <img src="../files/IMG_1656.JPG" alt="photo" style="width: 750px;">
             </figure>
             <div class="subContainer anim">
                 <h4 class="h4"><i class="fa-sharp-duotone fa-solid fa-angles-right"></i> <span data-i18n="aboutMeHeader">About me</span></h4>
-                <h2 id="h2" data-i18n="whoAmI">Who Am I</h2>
-                <p data-i18n="aboutDescription">Hi, I’m Fanil Ramakaev, a sophomore at the University of Westminster and a junior frontend developer passionate about
+                <h2 id="h2" class="txt" data-i18n="whoAmI">Who Am I</h2>
+                <p class="txt" id="p" data-i18n="aboutDescription">Hi, I’m Fanil Ramakaev, a sophomore at the University of Westminster and a junior frontend developer passionate about
                    creating clean, responsive, and user-friendly websites. I have a solid foundation in HTML, CSS, and JavaScript and am
                    currently delving deeper into React to expand my frontend expertise. Additionally, I possess foundational UI/UX design
                    skills. With a goal of becoming a full-stack developer, I am actively exploring backend technologies, including Node.js,
                    Express.js, and ASP.NET Core with C#.</p>
                 <div class="subContainer2 anim">
-                    <p><i class="fa-brands fa-html5"></i>Html5</p>
-                    <p><i class="fa-brands fa-css3"></i>Css3</p>
-                    <p><i class="fa-brands fa-js"></i>JavaScript</p>
-                    <p>C#</p>
-                    <p><i class="fa-brands fa-bootstrap"></i>Bootstrap</p>
+                    <p class="skills txt"><i class="fa-brands fa-html5"></i>Html5</p>
+                    <p class="skills txt">><i class="fa-brands fa-css3"></i>Css3</p>
+                    <p class="skills txt"><i class="fa-brands fa-js"></i>JavaScript</p>
+                    <p class="skills txt">C#</p>
+                    <p class="skills txt"><i class="fa-brands fa-bootstrap"></i>Bootstrap</p>
                 </div>
             </div>
         </section>
         <section id="mySkills">
             <h4 id="h4" class="h4 anim"><i class="fa-sharp-duotone fa-solid fa-angles-right"></i> <span data-i18n="mySkillsHeader">My services</span></h4>
-            <h2 class="anim" id="h2" data-i18n="whatCanIDo">What can I do</h2>
+            <h2 class="anim txt" id="h2" data-i18n="whatCanIDo">What can I do</h2>
 
             <div id="boxWrapper">
                 <div class="box anim">
                     <i class="fa-solid fa-flag"></i>
-                    <p data-i18n="branding">Branding</p>
-                    <p class="subText" data-i18n="brandingDescription">Creating consistent and cohesive brand experiences through the use of logos, color schemes, typography, and other branding assets.</p>
+                    <p data-i18n="branding" class="txt">Branding</p>
+                    <p class="subText txt" data-i18n="brandingDescription">Creating consistent and cohesive brand experiences through the use of logos, color schemes, typography, and other branding assets.</p>
                 </div>
                 <div class="box anim">
                     <i class="fa-solid fa-paintbrush"></i>
-                    <p data-i18n="graphicDesign">Graphic Design</p>
-                    <p class="subText" data-i18n="creativeDesignDescription">Leveraging artistic elements and aesthetic principles to craft visually appealing and engaging experiences.</p>
+                    <p data-i18n="graphicDesign" class="txt">Graphic Design</p>
+                    <p class="subText txt" data-i18n="creativeDesignDescription">Leveraging artistic elements and aesthetic principles to craft visually appealing and engaging experiences.</p>
                 </div>
                 <div class="box anim">
                     <i class="fa-solid fa-code"></i>
-                    <p data-i18n="cleanCode">Clean Code</p>
-                    <p class="subText" data-i18n="cleanCodeDescription">Writing code that is well-structured, reliable, and maintainable. It involves following coding best practices.</p>
+                    <p data-i18n="cleanCode" class="txt">Clean Code</p>
+                    <p class="subText txt" data-i18n="cleanCodeDescription">Writing code that is well-structured, reliable, and maintainable. It involves following coding best practices.</p>
                 </div>
                 <div class="box anim">
                     <i class="fa-solid fa-laptop"></i>
-                    <p data-i18n="userInterface">User Interface</p>
-                    <p class="subText" data-i18n="userInterfaceDescription">Creating intuitive and user-friendly designs that prioritize usability, accessibility, and seamless user experience.</p>
+                    <p data-i18n="userInterface" class="txt">User Interface</p>
+                    <p class="subText txt" data-i18n="userInterfaceDescription">Creating intuitive and user-friendly designs that prioritize usability, accessibility, and seamless user experience.</p>
                     <span class="circle"></span>
                     <span class="circle"></span>
                 </div>
                 <div class="box anim">
                     <i class="fa-solid fa-briefcase"></i>
-                    <p data-i18n="userExperience">User experience</p>
-                    <p class="subText" data-i18n="userExperienceDescription">Understanding user behaviours, needs, and preferences to create interfaces that are intuitive, efficient, and enjoyable to use.</p>
+                    <p data-i18n="userExperience" class="txt">User experience</p>
+                    <p class="subText txt" data-i18n="userExperienceDescription">Understanding user behaviours, needs, and preferences to create interfaces that are intuitive, efficient, and enjoyable to use.</p>
                 </div>
                 <div class="box anim">
                     <i class="fa-solid fa-headset"></i>
-                    <p data-i18n="fastSupport">Fast Support</p>
-                    <p class="subText" data-i18n="fastSupportDescription">Addressing and resolving user-reported issues or inquires related to the website or application.</p>
+                    <p data-i18n="fastSupport" class="txt">Fast Support</p>
+                    <p class="subText txt" data-i18n="fastSupportDescription">Addressing and resolving user-reported issues or inquires related to the website or application.</p>
                 </div>
             </div>
         </section>
@@ -143,25 +144,35 @@
     <footer>
         <div class="footer-content">
             <div class="footer-links">
-                <a href="#home" data-i18n="home">Home</a>
-                <a href="#aboutMe" data-i18n="aboutMe">About Me</a>
-                <a href="#mySkills" data-i18n="mySkills">My Skills</a>
-                <a href="#projects" data-i18n="projects">Projects</a>
-                <a href="#contact" data-i18n="contact">Contact</a>
+                <a href="#home" class="txt" data-i18n="home">Home</a>
+                <a href="#aboutMe" class="txt" data-i18n="aboutMe">About Me</a>
+                <a href="#mySkills" class="txt" data-i18n="mySkills">My Skills</a>
+                <a href="#projects" class="txt" data-i18n="projects">Projects</a>
+                <a href="#contact" class="txt" data-i18n="contact">Contact</a>
             </div>
             <div class="social-links">
-                <a href="https://t.me/fanil_279r" target="_blank"><i class="fa-brands fa-telegram"></i> Telegram</a>
-                <a href="https://www.instagram.com/r.fanil_279" target="_blank"><i class="fa-brands fa-instagram"></i> Instagram</a>
-                <a href="https://www.linkedin.com/in/fanil-ramakayev-6885922a6" target="_blank"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
-                <a href="https://github.com/fanil279" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
-                <a href="mailto:framakayev@students.wiut.uz" target="_blank"><i class="fa-solid fa-envelope"></i> Email</a>
+                <a href="https://t.me/fanil_279r" target="_blank" class="txt"><i class="fa-brands fa-telegram"></i> Telegram</a>
+                <a href="https://www.instagram.com/r.fanil_279" target="_blank" class="txt"><i class="fa-brands fa-instagram"></i> Instagram</a>
+                <a href="https://www.linkedin.com/in/fanil-ramakayev-6885922a6" target="_blank" class="txt"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+                <a href="https://github.com/fanil279" target="_blank" class="txt"><i class="fa-brands fa-github"></i> GitHub</a>
+                <a href="mailto:framakayev@students.wiut.uz" target="_blank" class="txt"><i class="fa-solid fa-envelope"></i> Email</a>
             </div>
-            <hr>
         </div>
+
+        <hr id="hr">
+
         <div class="lang">
-            <a href="#" lang="en" id="en" class="activeText">EN</a>
-            <a href="#" lang="ru" id="rus">RU</a>
+            <a href="#" class="txt activeText" lang="en" id="en" class="activeText">EN</a>
+            <a href="#" class="txt" lang="ru" id="rus">RU</a>
         </div>
+
+        <hr id="hr2">
+
+        <input type="checkbox" id="theme-toggle">
+        <label id="label" for="theme-toggle">
+            <i id="sun" class="fa-solid fa-sun"></i>
+            <i id="moon" class="fa-solid fa-moon"></i>
+        </label>
     </footer>
 </body>
 </html>

@@ -123,9 +123,8 @@ document.addEventListener("DOMContentLoaded", (e) => {
     }
 
     document.getElementById("en").addEventListener("click", (e) => {
-        e.preventDefault()
-        document.getElementById("rus").classList.remove("activeText")
         document.getElementById("en").classList.add("activeText")
+        document.getElementById("rus").classList.remove("activeText")
         location.reload()
     })
 
@@ -139,5 +138,82 @@ document.addEventListener("DOMContentLoaded", (e) => {
     const loader = document.getElementById("preloader")
     window.addEventListener("load", function() {
         loader.style.display = "none"
+    })
+
+
+    const label = document.getElementById("label")
+    let isDarkMode = false
+    
+    label.addEventListener("click", () => {
+        const nav = document.querySelector("nav")
+        const footer = document.querySelector("footer")
+        const mySkills = document.getElementById("mySkills")
+        const p = document.getElementById("p")
+        const subCon2 = document.getElementsByClassName("subContainer2")
+        const skills = document.getElementsByClassName("skills")
+        const txt = document.getElementsByClassName("txt")
+        const box = document.getElementsByClassName("box")
+        const hr = document.getElementById("hr")
+        const hr2 = document.getElementById("hr2")
+        const dropdown = document.getElementById("content")
+        const ddL = document.getElementById("ddLink")
+    
+        if (isDarkMode) {
+            // Revert to light mode
+            document.body.style.backgroundColor = "#a7a8a6"
+    
+            if (nav) nav.style.backgroundColor = ""
+            if (mySkills) mySkills.style.backgroundColor = ""
+            if (p) p.style.backgroundColor = ""
+            if (footer) footer.style.backgroundColor = ""
+            hr.style.backgroundColor = ""
+            hr2.style.backgroundColor = ""
+            hr.style.border = ""
+            hr2.style.border = ""
+            dropdown.style.backgroundColor = ""
+            ddL.style.backgroundColor = ""
+    
+            for (let i = 0; i < subCon2.length; i++) {
+                subCon2[i].style.backgroundColor = ""
+            }
+            for (let i = 0; i < skills.length; i++) {
+                skills[i].style.backgroundColor = ""
+            }
+            for (let i = 0; i < txt.length; i++) {
+                txt[i].style.color = ""
+            }
+            for (let i = 0; i < box.length; i++) {
+                box[i].style.backgroundColor = ""
+            }
+        } else {
+            // Apply dark mode
+            document.body.style.backgroundColor = "rgb(50, 50, 50)"
+    
+            if (nav) nav.style.backgroundColor = "black"
+            if (mySkills) mySkills.style.backgroundColor = "black"
+            if (p) p.style.backgroundColor = "rgb(50, 50, 50)"
+            if (footer) footer.style.backgroundColor = "black"
+            hr.style.backgroundColor = "#EE82EE"
+            hr2.style.backgroundColor = "#EE82EE"
+            hr.style.border = "1px solid #EE82EE"
+            hr2.style.border = "1px solid #EE82EE"
+            dropdown.style.backgroundColor = "black"
+            ddL.style.backgroundColor = "black"
+    
+            for (let i = 0; i < subCon2.length; i++) {
+                subCon2[i].style.backgroundColor = "black"
+            }
+            for (let i = 0; i < skills.length; i++) {
+                skills[i].style.backgroundColor = "rgb(50, 50, 50)"
+            }
+            for (let i = 0; i < txt.length; i++) {
+                txt[i].style.color = "white"
+            }
+            for (let i = 0; i < box.length; i++) {
+                box[i].style.backgroundColor = "rgb(50, 50, 50)"
+            }
+        }
+    
+        isDarkMode = !isDarkMode
     })
 })
