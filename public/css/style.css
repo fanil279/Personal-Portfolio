@@ -8,6 +8,16 @@
     --hrC: darkred;
 }
 
+.dark-mode {
+  --mainCol: black;
+  --mainCol2: rgb(50, 50, 50);
+  --fontCol: white;
+  --linkCol: darkred;
+  --hrC: #EE82EE;
+  background-color: var(--mainCol2);
+  color: var(--fontCol);
+}
+
 *,
 *::before,
 *::after {
@@ -23,7 +33,7 @@ html {
 body {
     background-color: var(--mainCol2);
     overflow-x: hidden;
-    font-family: "Lato", serif;
+    font-family: "Lato", sans-serif;
     font-weight: 400;
     font-style: normal;
     margin-inline: auto;
@@ -66,7 +76,7 @@ nav a:hover {
 
 .dropdown:hover .content {
   display: block;
-  background-color: var(--mainCol2);
+  background-color: var(--mainCol);
 }
 
 .dropdown:hover .fa-arrow-down {
@@ -139,6 +149,8 @@ h3 {
   color: white;
   font-size: 2rem;
   text-align: center;
+  word-wrap: break-word;
+  max-width: 900px;
 }
 
 #aboutMe {
@@ -252,6 +264,11 @@ h2 {
   color: white;
 }
 
+.boxDark:hover {
+  background-color: var(--fontCol);
+  color: var(--mainCol);
+}
+
 .box p {
   font-size: 1.3rem;
 }
@@ -312,7 +329,7 @@ option {
 }
 
 .form-select:focus {
-  border-color: var(--linkCol); /* Highlight on focus */
+  border-color: var(--linkCol);
   box-shadow: 0 0 4px var(--linkCol);
 }
 
@@ -537,4 +554,46 @@ label .fa-moon {
 
 #theme-toggle:checked + label .fa-moon {
   fill: #fff;
+}
+
+#up {
+  color: white;
+  background-color: var(--linkCol);
+  position: fixed;
+  right: 4%;
+  bottom: 18%;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+}
+
+#down {
+  color: white;
+  background-color: var(--linkCol);
+  position: fixed;
+  right: 4%;
+  bottom: 9%;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  margin-top: 20px;
+  border: none;
+  outline: none;
+}
+
+.btnArr:hover {
+  transform: scale(1.2);
+}
+
+#shape {
+  position: absolute;
+  background: var(--hrC);
+  width: 200px;
+  height: 200px;
+  margin-top: 3rem;
+  opacity: 0.2;
+  margin-right: 69rem;
+  clip-path: path("M 40,32 Q 90,0 160,40 L 140,60 Q 100,30 60,50 L 60,100 L 140,95 Q 160,100 140,120 L 60,120 L 60,160 Q 50,190 30,160 L 30,40 Z");
 }

@@ -1,8 +1,9 @@
 document.addEventListener("DOMContentLoaded", (e) => {
+    // Client-side form validation
     const form = document.querySelector("form");
     if (form) {
         form.addEventListener("submit", (e) => {
-            e.preventDefault();
+            e.preventDefault()
 
             const firstName = document.getElementsByName("firstname")[0].value.trim()
             const lastName = document.getElementsByName("lastname")[0].value.trim()
@@ -18,7 +19,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
 
             spanFn.textContent = "";
             spanLn.textContent = "";
-            spanEmail.textContent = "";
+            spanEmail.textContent = ""
 
             if (firstName === "") {
                 spanFn.textContent = "First name cannot be empty!"
@@ -46,10 +47,11 @@ document.addEventListener("DOMContentLoaded", (e) => {
 
             window.alert("Form submitted successfully!")
             form.submit()
-        });
+        })
     }
 
 
+    // CV download functionality logic
     const btnCv = document.getElementById("download-cv-btn")
     const btnLink = document.getElementById("cv-link")
 
@@ -58,6 +60,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
     })
 
 
+    // English, Russian language switcher
     const langData = {
         ru: {
             home: "ГЛАВНАЯ",
@@ -77,6 +80,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
             fastSupport: "Быстрая поддержка",
             homeFooter: "Главная",
             aboutMeFooter: "Обо мне",
+            aboutMeHeader: "",
             mySkillsFooter: "Мои навыки",
             projectsFooter: "Проекты",
             contactFooter: "Связаться",
@@ -129,7 +133,6 @@ document.addEventListener("DOMContentLoaded", (e) => {
     })
 
     document.getElementById("rus").addEventListener("click", (e) => {
-        e.preventDefault()
         changeLang("ru")
         document.getElementById("rus").classList.add("activeText")
         document.getElementById("en").classList.remove("activeText")
@@ -141,79 +144,56 @@ document.addEventListener("DOMContentLoaded", (e) => {
     })
 
 
+    // Light, Dark mode toggle
     const label = document.getElementById("label")
-    let isDarkMode = false
-    
     label.addEventListener("click", () => {
-        const nav = document.querySelector("nav")
-        const footer = document.querySelector("footer")
-        const mySkills = document.getElementById("mySkills")
-        const p = document.getElementById("p")
-        const subCon2 = document.getElementsByClassName("subContainer2")
-        const skills = document.getElementsByClassName("skills")
-        const txt = document.getElementsByClassName("txt")
-        const box = document.getElementsByClassName("box")
-        const hr = document.getElementById("hr")
-        const hr2 = document.getElementById("hr2")
-        const dropdown = document.getElementById("content")
-        const ddL = document.getElementById("ddLink")
-    
-        if (isDarkMode) {
-            // Revert to light mode
-            document.body.style.backgroundColor = "#a7a8a6"
-    
-            if (nav) nav.style.backgroundColor = ""
-            if (mySkills) mySkills.style.backgroundColor = ""
-            if (p) p.style.backgroundColor = ""
-            if (footer) footer.style.backgroundColor = ""
-            hr.style.backgroundColor = ""
-            hr2.style.backgroundColor = ""
-            hr.style.border = ""
-            hr2.style.border = ""
-            dropdown.style.backgroundColor = ""
-            ddL.style.backgroundColor = ""
-    
-            for (let i = 0; i < subCon2.length; i++) {
-                subCon2[i].style.backgroundColor = ""
-            }
-            for (let i = 0; i < skills.length; i++) {
-                skills[i].style.backgroundColor = ""
-            }
-            for (let i = 0; i < txt.length; i++) {
-                txt[i].style.color = ""
-            }
-            for (let i = 0; i < box.length; i++) {
-                box[i].style.backgroundColor = ""
-            }
-        } else {
-            // Apply dark mode
-            document.body.style.backgroundColor = "rgb(50, 50, 50)"
-    
-            if (nav) nav.style.backgroundColor = "black"
-            if (mySkills) mySkills.style.backgroundColor = "black"
-            if (p) p.style.backgroundColor = "rgb(50, 50, 50)"
-            if (footer) footer.style.backgroundColor = "black"
-            hr.style.backgroundColor = "#EE82EE"
-            hr2.style.backgroundColor = "#EE82EE"
-            hr.style.border = "1px solid #EE82EE"
-            hr2.style.border = "1px solid #EE82EE"
-            dropdown.style.backgroundColor = "black"
-            ddL.style.backgroundColor = "black"
-    
-            for (let i = 0; i < subCon2.length; i++) {
-                subCon2[i].style.backgroundColor = "black"
-            }
-            for (let i = 0; i < skills.length; i++) {
-                skills[i].style.backgroundColor = "rgb(50, 50, 50)"
-            }
-            for (let i = 0; i < txt.length; i++) {
-                txt[i].style.color = "white"
-            }
-            for (let i = 0; i < box.length; i++) {
-                box[i].style.backgroundColor = "rgb(50, 50, 50)"
-            }
+        const themeToggle = document.getElementById("theme-toggle")
+        const body = document.body
+        const boxes = document.getElementsByClassName("box")
+
+        // Check for saved theme in localStorage
+        if (localStorage.getItem("dark-mode") === "enabled") {
+            body.classList.add("dark-mode")
+            themeToggle.checked = true
         }
+
+        themeToggle.addEventListener("change", function() {
+            if (this.checked) {
+                body.classList.add("dark-mode")
+
+                for (const box of boxes) {
+                    box.classList.add("boxDark")
+                }
+
+                localStorage.setItem("dark-mode", "enabled")
+            } else {
+                body.classList.remove("dark-mode")
+                
+                for (const box of boxes) {
+                    box.classList.remove("boxDark")
+                }
+
+                localStorage.setItem("dark-mode", "disabled")
+            }
+        })
+    })
+
+
+    const btnUp = document.getElementById("up")
+    btnUp.addEventListener("click", () => {
+        window.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: "smooth"
+        });
+    });
     
-        isDarkMode = !isDarkMode
+    const btnDown = document.getElementById("down")
+    btnDown.addEventListener("click", () => {
+        window.scrollTo({
+            top: document.body.scrollHeight,
+            left: 0,
+            behavior: "smooth"
+        })
     })
 })
