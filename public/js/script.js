@@ -195,5 +195,5 @@ document.addEventListener("DOMContentLoaded", (e) => {
             left: 0,
             behavior: "smooth"
         })
-    })
+    })   
 })

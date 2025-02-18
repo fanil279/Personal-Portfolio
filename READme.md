@@ -1,0 +1,1 @@
+This project is a personal portfolio of mine. It is a fullstack application. More information regarding the project will be added later.

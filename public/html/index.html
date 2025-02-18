@@ -10,24 +10,37 @@
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/responsive.css">
     <link rel="icon" type="image/x-icon" href="../files/">
-    <script src="../js/script.js"></script>
+    <script src="../js/script.js" defer></script>
 </head>
 <body>
     <div id="preloader"></div>
 
     <header>
         <nav>
+            <ul class="sidebar">
+                <i onclick="hideSidebar()" class="fa-solid fa-xmark"></i>
+
+                <li><a data-i18n="home" class="txt" href="#home">HOME</a></li>
+                <li><a data-i18n="aboutMe" class="txt" href="#aboutMe">ABOUT ME</a></li>
+                <li><a data-i18n="mySkills" class="txt" href="#mySkills">MY SKILLS</a></li>
+                <li><a data-i18n="projects" class="txt" href="#projects">PROJECTS</a></li>
+                <li><a data-i18n="contact" class="txt" href="#contact">CONTACT</a></li>
+            </ul>
+
+
             <i class="fa-duotone fa-solid fa-fire"></i>
-            <a data-i18n="home" class="txt" href="#home">HOME</a>
-            <div class="dropdown" id="ddLink">
+            <a data-i18n="home" class="txt hideOnMobile" href="#home">HOME</a>
+            <div class="dropdown hideOnMobile" id="ddLink">
                 <a data-i18n="aboutMe" class="txt" href="#aboutMe">ABOUT ME</a>
                 <i class="fa-solid txt fa-arrow-down"></i>
                 <div id="content" class="content">
                     <a data-i18n="mySkills" class="txt" href="#mySkills">MY SKILLS</a>
-                </div>
+                </div>       
             </div>
-            <a data-i18n="projects" class="txt" href="#projects">PROJECTS</a>
-            <a data-i18n="contact" class="txt" href="#contact">CONTACT</a>
+            <a data-i18n="projects" class="txt hideOnMobile" href="#projects">PROJECTS</a>
+            <a data-i18n="contact" class="txt hideOnMobile" href="#contact">CONTACT</a>
+
+            <i onclick="showSidebar()" class="fa-solid fa-bars menu"></i>
         </nav>
 
         <video id="myVideo" class="video" preload="auto" autoplay muted loop style="width: 100%; height: 100%;">
@@ -50,7 +63,7 @@
             </figure>
             <div class="subContainer anim">
                 <h4 class="h4"><i class="fa-sharp-duotone fa-solid fa-angles-right"></i> <span data-i18n="aboutMeHeader">About me</span></h4>
-                <h2 id="h2" class="txt" data-i18n="whoAmI">Who Am I</h2>
+                <h2 class="txt h2" data-i18n="whoAmI">Who Am I</h2>
                 <p class="txt" id="p" data-i18n="aboutDescription">Hi, I’m Fanil Ramakaev, a sophomore at the University of Westminster and a junior frontend developer passionate about
                    creating clean, responsive, and user-friendly websites. I have a solid foundation in HTML, CSS, and JavaScript and am
                    currently delving deeper into React to expand my frontend expertise. Additionally, I possess foundational UI/UX design
@@ -67,7 +80,7 @@
         </section>
         <section id="mySkills">
             <h4 id="h4" class="h4 anim"><i class="fa-sharp-duotone fa-solid fa-angles-right"></i> <span data-i18n="mySkillsHeader">My services</span></h4>
-            <h2 class="anim txt" id="h2" data-i18n="whatCanIDo">What can I do</h2>
+            <h2 class="anim txt h2" data-i18n="whatCanIDo">What can I do</h2>
 
             <div id="boxWrapper">
                 <div class="box anim">
@@ -162,7 +175,7 @@
         <hr id="hr">
 
         <div class="lang">
-            <a href="#" class="txt activeText" lang="en" id="en" class="activeText">EN</a>
+            <a href="#" class="txt activeText" lang="en" id="en">EN</a>
             <a href="#" class="txt" lang="ru" id="rus">RU</a>
         </div>
 
@@ -179,5 +192,17 @@
 
         <div id="shape"></div>
     </footer>
+
+    <script>
+        function showSidebar() {
+            const sidebar = document.querySelector(".sidebar")
+            sidebar.style.display = "flex"
+        }
+    
+        function hideSidebar() {
+            const sidebar = document.querySelector(".sidebar")
+            sidebar.style.display = "none"
+        }
+    </script>
 </body>
 </html>
