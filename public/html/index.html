@@ -119,11 +119,9 @@
         </section>
         <section id="projects">
             <h1 data-i18n="myProjects">My projects</h1>
-            <select class="form-select form-select-sm" aria-label="Small select example">
-                <option id="default" selected data-i18n="selectProject">Select a project to view!</option>
-                <option value="1" data-i18n="comingSoon">New project is coming soon...</option>
-                <option value="2" data-i18n="comingSoon">New project is coming soon...</option>
-                <option value="3" data-i18n="comingSoon">New project is coming soon...</option>
+            <select class="form-select form-select-sm" aria-label="Small select example" onchange="redirectToApp(this)">
+                <option id="default" selected data-i18n="selectProject"></option>
+                <option value="https://weather-app-production-7c84.up.railway.app/" data-i18n="comingSoon">Weather App</option>
               </select>
               <button type="button" id="download-cv-btn" class="btn btn-danger" data-i18n="downloadCV">Download my CV</button>
               <a id="cv-link" href="../files/CV.pdf" download="CV.pdf" style="display: none"></a>
@@ -202,6 +200,13 @@
         function hideSidebar() {
             const sidebar = document.querySelector(".sidebar")
             sidebar.style.display = "none"
+        }
+
+        function redirectToApp(select) {
+            const url = select.value;
+            if (url) {
+                window.open(url, "_blank");
+            }
         }
     </script>
 </body>
