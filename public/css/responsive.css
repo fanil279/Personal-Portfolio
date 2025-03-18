@@ -526,3 +526,10 @@
     animation-timeline: view(80% 20%);
   }
 }
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  nav { font-size: 96%; }
+  .social-links a {font-size: 150%;}
+  .footer-links a {font-size: 150%;}
+  .lang a {font-size: 150%;}
+}
