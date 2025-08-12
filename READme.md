@@ -1,1 +1,1 @@
-This project is a personal portfolio of mine. It is a fullstack application. Link to the hosted website is: https://personal-portfolio-three-zeta-44.vercel.app/
+This project is a personal portfolio of mine. It is a fullstack application. Link to the hosted website is: https://personal-portfolio-six-coral-93.vercel.app/
