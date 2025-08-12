@@ -2,10 +2,7 @@
   "name": "portfolio",
   "version": "1.0.0",
   "main": "express.js",
-  "scripts": {
-    "start": "node express",
-     "dev": "node --watch --env-file=.env express"
-  },
+  "scripts": {},
   "keywords": [
     "portfolio",
     "personal-website",
@@ -20,8 +17,5 @@
   ],
   "author": "Fanil Ramakaev",
   "license": "ISC",
-  "description": "A Japanese-inspired personal portfolio website showcasing my web development journey.",
-  "dependencies": {
-    "express": "^4.21.2"
-  }
+  "description": "A Japanese-inspired personal portfolio website showcasing my web development journey."
 }
